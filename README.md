@@ -17,3 +17,6 @@ Nuget Paketi (new)
 -Microsoft.EntityFrameworkCore.Tools 5.0.5  
 -Microsoft.EntityFrameworkCore.SqlServer 5.0.5  
 -Microsoft.EntityFrameworkCore.Design 5.0.5  
+
+Scafholded local scafolding
+Scaffold-DbContext "Server=DESKTOP-UFMJQES\MSSQLSERVER_OLAP; Initial Catalog=eProdaja;   Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
