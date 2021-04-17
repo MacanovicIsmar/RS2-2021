@@ -7,7 +7,7 @@ Password:Test
 
 
 Nuget Paketi All
--Microsoft.Netcore.App v2.2.8
+-Microsoft.Netcore.App v2.2.8 
 -Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.10.13
 -Swashbuckle.AspNetCore 5.6.3
 
