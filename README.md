@@ -20,3 +20,6 @@ Nuget Paketi (new)
 
 Scafholded local scafolding  
 Scaffold-DbContext "Server=DESKTOP-UFMJQES\MSSQLSERVER_OLAP; Initial Catalog=eProdaja;   Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+EF CORE  
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-5.0  
