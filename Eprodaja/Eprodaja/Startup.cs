@@ -32,7 +32,13 @@ namespace Eprodaja
 			services.AddSwaggerGen();
 
 			//ismar dodano zive dok traje request
-			services.AddTransient<ProizvodServis, ProizvodService>();
+			//services.AddTransient<ProizvodServis, ProizvodService>();
+			//services.AddScoped<ProizvodService, ProizvodServis>;
+			//transijent svaki resolve kroz konstruktor dobija novu instancu 
+			//scope dok je "request je ziv" 
+			//singletone -za sve requeste ista instanca 
+
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
