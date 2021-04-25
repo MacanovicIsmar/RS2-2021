@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eprodaja", "Eprodaja\Eprodaja.csproj", "{C945B87A-C928-428E-8E77-A9D95358A7F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eprodaja", "Eprodaja\Eprodaja.csproj", "{C945B87A-C928-428E-8E77-A9D95358A7F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eprodaja.model", "eprodaja.model\eprodaja.model.csproj", "{A01C3A9D-6E9A-4329-96FA-FFF847749828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C945B87A-C928-428E-8E77-A9D95358A7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C945B87A-C928-428E-8E77-A9D95358A7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C945B87A-C928-428E-8E77-A9D95358A7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01C3A9D-6E9A-4329-96FA-FFF847749828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01C3A9D-6E9A-4329-96FA-FFF847749828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01C3A9D-6E9A-4329-96FA-FFF847749828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01C3A9D-6E9A-4329-96FA-FFF847749828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

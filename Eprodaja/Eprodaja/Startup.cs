@@ -1,8 +1,11 @@
+using Eprodaja.Filters;
+using Eprodaja.Models;
 using Eprodaja.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,7 +29,27 @@ namespace Eprodaja
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddControllers();
+
+
+			//paket automapper ismar 
+			services.AddAutoMapper(typeof(Startup));
+			services.AddControllersWithViews();
+
+
+			//dodajemo error filter /ismar
+			services.AddControllers(x=> 
+			{
+
+				x.Filters.Add<Errorfilter>();
+			
+			
+			
+			});
+
+
+
+
+
 
 			// nuget paket addswaggergen 
 			services.AddSwaggerGen();
@@ -37,6 +60,15 @@ namespace Eprodaja
 			//transijent svaki resolve kroz konstruktor dobija novu instancu 
 			//scope dok je "request je ziv" 
 			//singletone -za sve requeste ista instanca 
+
+
+			//ismar dodano od mene
+			services.AddDbContext<eProdajaContext>(options =>
+				options.UseSqlServer(Configuration.GetConnectionString("DockerVM")));
+
+
+			//ismar dodano od mene dependecy injection
+			services.AddScoped<IKorisniciService, KorisniciService>();
 
 
 		}
