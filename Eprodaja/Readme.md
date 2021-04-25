@@ -1,24 +1,21 @@
-GIT COMMANDS: https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/
+Vjezbe iz Predmeta rs2 2021
 
-DOCKER SQL IMAGE https://hub.docker.com/_/microsoft-mssql-server
+user:Admin
+Password:Test
 
-docker pull mcr.microsoft.com/mssql/server:2017-latest docker run -e 'ACCEPT_EULA=Y' -e 'QWEasd123!' -p 1434:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+Nuget Paketi All
+-Microsoft.Netcore.App v2.2.8
+-Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.10.13
+-Swashbuckle.AspNetCore 5.6.3
 
-NUGET: Microsoft.Aspnetcore.app (db, security, logging etc)
+Nuget Paketi (new)
+-Microsoft.EntityFrameworkCore.Tools 5.0.5
+-Microsoft.EntityFrameworkCore.SqlServer 5.0.5
+-Microsoft.EntityFrameworkCore.Design 5.0.5
+-System.ComponentModel.Annotations 5.0.0
 
-DB Scaffold
+Scafholded local scafolding
+Scaffold-DbContext "Server=DESKTOP-UFMJQES\MSSQLSERVER_OLAP; Initial Catalog=eProdaja; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=vs
-
-Scaffold-DbContext 'Data Source=localhost, 1434;Initial Catalog=eProdaja; user=sa; Password=QWEasd123!' Microsoft.EntityFrameworkCore.SqlServer -OutputDir Database
-
-EF CORE https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-5.0
-
-*Automapper 
-
-Link: https://code-maze.com/automapper-net-core/
-package console command: Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
-
-
-
-
+EF CORE
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-5.0
