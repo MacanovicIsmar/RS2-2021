@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eprodaja.model.Requests;
+using Eprodaja.Filters;
 using Eprodaja.Models;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace Eprodaja.Services
 
 		public eprodaja.model.Korisnici insert(KorisniciInsertRequest request)
 		{
-			throw new NotImplementedException();
+			throw new UserException("Lozinka nija ispravna");
 		}
 
 
