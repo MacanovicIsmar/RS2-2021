@@ -13,6 +13,9 @@ namespace Eprodaja.Maping
 		public EprodajaProfil()
 		{
 			CreateMap<Models.Korisnici, eprodaja.model.Korisnici>();
+			CreateMap<Models.JediniceMjere, eprodaja.model.JedinicaMjere>();
+			CreateMap<Models.VrsteProizvodum, eprodaja.model.VrsteProizvodum>();
+
 		}
 
 

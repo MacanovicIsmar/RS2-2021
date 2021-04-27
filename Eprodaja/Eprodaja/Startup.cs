@@ -69,6 +69,8 @@ namespace Eprodaja
 
 			//ismar dodano od mene dependecy injection
 			services.AddScoped<IKorisniciService, KorisniciService>();
+			services.AddScoped<IJedinicaMjereService, JedinicaMjereService>();
+			services.AddScoped<IVrstaProizvodaService, VrstaProizvodaService>();
 
 
 		}
