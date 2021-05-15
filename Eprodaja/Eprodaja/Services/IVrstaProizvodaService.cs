@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eprodaja.Services
 {
-	public interface IVrstaProizvodaService:IReadService<VrsteProizvodum>
+	public interface IVrstaProizvodaService:IReadService<VrsteProizvodum,object>
 	{
 		//public IEnumerable<VrsteProizvodum> Get();
 

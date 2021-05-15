@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Eprodaja.Services
 {
-	public class BaseReadService<T,TDB> : IReadService<T> where T : class where TDB :class
+	public class BaseReadService<T,TDB, TSearch> : IReadService<T, TSearch> where T : class where TDB :class where TSearch : class
 	{
 		public eProdajaContext contex { get; set; } //entity framework 
 		protected readonly IMapper _mapper;         //automapper 
@@ -23,7 +23,7 @@ namespace Eprodaja.Services
 
 
 
-		public IEnumerable<T> Get()
+		public virtual IEnumerable<T> Get(TSearch search=null)
 		{
 
 
@@ -35,7 +35,7 @@ namespace Eprodaja.Services
 			return _mapper.Map<List<T>>(list);
 		}
 
-		public T GetById(int Id)
+		public virtual T GetById(int Id)
 		{
 			var set = contex.Set<TDB>();
 

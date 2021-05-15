@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Eprodaja.Services
 {
-	public class ProizvodService:ProizvodServis
+	public class ProizvodServiceold:ProizvodServisold
 	{
 		private static List<proizvod> Proizvodi;
 
 
-		static ProizvodService()
+		static ProizvodServiceold()
 		{
 			Proizvodi = new List<proizvod>()
 			{

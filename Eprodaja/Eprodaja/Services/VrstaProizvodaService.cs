@@ -8,16 +8,17 @@ using System.Threading.Tasks;
 
 namespace Eprodaja.Services
 {
-	public class VrstaProizvodaService : BaseReadService<eprodaja.model.VrsteProizvodum,Models.VrsteProizvodum>
+	public class VrstaProizvodaService : BaseReadService<eprodaja.model.VrsteProizvodum,Models.VrsteProizvodum,object>
+	,IVrstaProizvodaService
 	{
-		public eProdajaContext contex { get; set; } //entity framework 
-		protected readonly IMapper _mapper;         //automapper 
+		//public eProdajaContext contex { get; set; } //entity framework 
+		//protected readonly IMapper _mapper;         //automapper 
 
 
-		public VrstaProizvodaService(eProdajaContext contex_, IMapper Maper)
+		public VrstaProizvodaService(eProdajaContext contex_, IMapper Maper):base(contex_,Maper)
 		{
-			contex = contex_;
-			_mapper = Maper;
+			//contex = contex_;
+			//_mapper = Maper;
 
 		}
 

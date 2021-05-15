@@ -8,31 +8,19 @@ using System.Threading.Tasks;
 
 namespace Eprodaja.Services
 {
-	public class JedinicaMjereService : IJedinicaMjereService
+	public class JedinicaMjereService :BaseReadService<eprodaja.model.JedinicaMjere,Models.JediniceMjere,object> 
+		,IJedinicaMjereService
 	{
-		public eProdajaContext contex { get; set; } //entity framework 
-		protected readonly IMapper _mapper;         //automapper 
+		
 
 
-		public JedinicaMjereService(eProdajaContext contex_, IMapper Maper)
+		public JedinicaMjereService(eProdajaContext contex_, IMapper Maper):base(contex_,Maper)
 		{
-			contex = contex_;
-			_mapper = Maper;
+			
 
 		}
 
-
-		public IEnumerable<JedinicaMjere> Get()
-		{
-			return contex.JediniceMjeres.ToList().Select(X => _mapper.Map<JedinicaMjere>(X)).ToList();
-		}
-
-		public JedinicaMjere GetById(int Id)
-		{
-			var entity = contex.JediniceMjeres.Find(Id);
-
-			return _mapper.Map<JedinicaMjere>(entity);
-
-		}
+		
+		
 	}
 }

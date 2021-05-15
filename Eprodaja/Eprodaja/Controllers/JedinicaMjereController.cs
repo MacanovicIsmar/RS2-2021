@@ -12,39 +12,23 @@ namespace Eprodaja.Controllers
 	[Route("[controller]")]
 
 
-	public class JedinicaMjereController : ControllerBase
+	public class JedinicaMjereController : BaseReadController<eprodaja.model.JedinicaMjere,object>
 	{
-		private readonly IJedinicaMjereService service_;
-
-
-		public JedinicaMjereController(IJedinicaMjereService service)
-		{
-
-			service_ = service;
-
-
-		}
-
-
-
-
-		[HttpGet]
-
-		public IEnumerable<eprodaja.model.JedinicaMjere> Get()
-		{
-
-			return service_.Get();
-		}
 		
-		[HttpGet("{Id}")]
-		
-		public JedinicaMjere GetById(int Id)
+
+
+		public JedinicaMjereController(IJedinicaMjereService service):base(service)
 		{
 
+			
 
-			return service_.GetById(Id);
 
 		}
+
+
+
+
+		
 
 
 

@@ -12,12 +12,12 @@ namespace Eprodaja.Controllers
 	[Route("[controller]")]
 
 
-	public class ProizvodController : ControllerBase
+	public class ProizvodControllerOld : ControllerBase
 	{
 		
-		public ProizvodServis proizvodservis { get; set;}
+		public ProizvodServisold proizvodservis { get; set;}
 
-		public ProizvodController(ProizvodServis proizvodservis_)
+		public ProizvodControllerOld(ProizvodServisold proizvodservis_)
 		{
 
 			proizvodservis = proizvodservis_;

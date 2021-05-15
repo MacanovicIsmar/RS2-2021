@@ -71,7 +71,7 @@ namespace Eprodaja
 			services.AddScoped<IKorisniciService, KorisniciService>();
 			services.AddScoped<IJedinicaMjereService, JedinicaMjereService>();
 			services.AddScoped<IVrstaProizvodaService, VrstaProizvodaService>();
-
+			services.AddScoped<IProizvodeServis, ProizvodServis>();
 
 		}
 
